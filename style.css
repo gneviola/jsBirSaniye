@@ -1,0 +1,19 @@
+body {
+    background-color:blanchedalmond;
+}
+#idDugme1 {
+    padding: 100px;
+    background-color: bisque;
+    flex: auto;
+    font-size: 2em;
+}
+#idDugme2 {
+    background-color: bisque;
+    flex: auto;
+    font-size: larger;
+}
+#idDugme3 {
+    background-color: bisque;
+    flex: auto;
+    font-size: larger;
+}
