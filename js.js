@@ -1,20 +1,19 @@
 // @ts-check
-async function bekle() {
-    let bas = document.getElementById("idDugme");
+let sifirinciDugme = document.getElementById("idDugme");
+let birinciDugme = document.getElementById('idDugme1');
 
-    let sifirinciDugme = document.getElementById('idDugme');
-    let birinciDugme = document.getElementById('idDugme1');
+async function bekle() {
+
     for (let i = 1; i <= 50; i++) {
         sifirinciDugme.style.padding = i + "px";
         birinciDugme.style.margin = i + "px";
         birinciDugme.textContent = "margin = " + i;
         sifirinciDugme.textContent = "padding = " + i;
-        await sleep(300);
+        await sleep(50);
+        sifirinciDugme.onclick = null;
     };
-
-    bas.onclick = function () {
-        alert("meraba");
-    }
+    // onclick null oldugu icin baska yoloni bulamadim
+    sifirinciDugme.onclick = bekle
 };
 
 function sleep(ms) {
@@ -22,3 +21,7 @@ function sleep(ms) {
 }
 
 bekle();
+
+sifirinciDugme.onclick = function () {
+    bekle();
+}
